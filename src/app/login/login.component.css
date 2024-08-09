@@ -1,0 +1,116 @@
+.loginContainer {
+  background: url(../assets/bg/01.jpg);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: cover;
+  height: 100vh;
+  animation: up 30s alternate infinite;
+  display: grid;
+  place-items: center;
+}
+
+@keyframes up {
+  from {
+    background-position-x: 0%;
+    background-position-y: 0%;
+  }
+  to {
+    background-position-x: 50%;
+    background-position-y: 100%;
+  }
+}
+
+.loginContainerIn {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 12px;
+  height: 80vh;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+}
+
+.loginLeft {
+  padding: 10% 36px;
+  display: grid;
+  gap: 12px;
+  align-content: baseline;
+  grid-template-rows: max-content 1fr;
+}
+
+.dividerh {
+  align-self: center;
+  width: 2px;
+  height: 80%;
+  background: linear-gradient(var(--primary), var(--green));
+}
+
+.dividerv {
+  height: 1px;
+  width: 80%;
+  justify-self: center;
+  background: var(--primary);
+}
+
+.loginList {
+  display: grid;
+  gap: 36px;
+  /* grid-template-columns: repeat(3, max-content); */
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 72px;
+}
+
+.loginList > * {
+  /* width: 28px;
+  height: 28px; */
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.loginList > *:nth-child(1) > *:nth-child(1) {
+  background: url(../assets/icons/g.svg);
+  height: 18px;
+}
+
+.loginList > *:nth-child(2) > *:nth-child(1) {
+  background: url(../assets/icons/i.svg);
+  height: 18px;
+}
+
+.loginList > *:nth-child(3) > *:nth-child(1) {
+  background: url(../assets/icons/x.svg);
+  height: 18px;
+}
+
+.loginRight {
+  background-image: url(../assets/login/23.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20%;
+  animation: bg 20s infinite forwards;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
+}
+
+@keyframes bg {
+  0% {
+    background-image: url(../assets/login/23.svg);
+  }
+  20% {
+    background-image: url(../assets/login/25.svg);
+  }
+  40% {
+    background-image: url(../assets/login/28.svg);
+  }
+  60% {
+    background-image: url(../assets/login/32.svg);
+  }
+  80% {
+    background-image: url(../assets/login/44.svg);
+  }
+}

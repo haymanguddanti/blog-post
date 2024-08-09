@@ -1,0 +1,16 @@
+<div class="pageContainer">
+  <div class="h1 bold">
+    {{ post.title }}
+  </div>
+  <div class="subTitle">
+    <div class="filters">
+      <div class="h6" *ngFor="let tag of post.tags">{{ tag }}</div>
+    </div>
+    <div class="author bold h5">
+      <div class="gradientText">{{ post.author }}</div>
+      <div>&nbsp;| {{ post.date }}</div>
+    </div>
+  </div>
+  <img class="artcileImg" src="{{ post.image }}" />
+  <div class="h5" innerHTML="{{ post.description }}"></div>
+</div>

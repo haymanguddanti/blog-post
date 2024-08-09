@@ -1,0 +1,69 @@
+<div class="pageContainer">
+  <div class="heroContainer">
+    <a class="heroContainerLeft" href="/view/{{ posts[0].id }}">
+      <div class="h3 bold">
+        {{ posts[0].title }}
+      </div>
+      <div class="author bold">
+        <div class="gradientText">{{ posts[0].author }}</div>
+        <div>&nbsp;| {{ formatDate(posts[0].date) }}</div>
+      </div>
+      <div class="heroImg"></div>
+      <div></div>
+      <div></div>
+      <div class="h6 twoLines">
+        {{ posts[0].description }}
+      </div>
+    </a>
+    <div class="heroContainerRight">
+      <div class="h2 bold">Editior's Picks</div>
+      <a class="featured" *ngFor="let post of ePosts" href="/view/{{ post.id }}">
+        <div
+          class="featureImg"
+          [style.backgroundImage]="'url(' + post.image + ')'"
+        ></div>
+        <div>
+          <div class="h6 twoLines">
+            {{ post.title }}
+          </div>
+          <div class="author bold">
+            <div class="gradientText">{{ post.author }}</div>
+            <div>&nbsp;| {{ formatDate(post.date) }}</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div></div>
+  <div></div>
+  <div class="filters">
+    <div class="h6" (click)="filterPosts(0)">All</div>
+    <div class="h6" (click)="filterPosts(1)">Latest</div>
+    <div class="h6" (click)="filterPosts(2)">Popular</div>
+    <input
+      type="text"
+      placeholder="Search"
+      (keyup)="searchPosts($event.target)"
+      id="search"
+      [(ngModel)]="searchValue"
+    />
+  </div>
+  <div class="articleListContainer">
+    <a
+      class="articleCard"
+      *ngFor="let post of filteredPosts"
+      href="/view/{{ post.id }}"
+    >
+      <img class="artcileImg" [src]="post.image" />
+      <div>
+        <div class="h5 bold underline twoLines">
+          {{ post.title }}
+        </div>
+        <div class="author bold">
+          <div class="gradientText">{{ post.author }}</div>
+          <div>&nbsp;| {{ formatDate(post.date) }}</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

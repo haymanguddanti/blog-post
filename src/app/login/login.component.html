@@ -1,0 +1,103 @@
+<!-- <div class="loginContainer">
+  <div class="loginContainerIn">
+    <div class="loginLeft">
+      <div class="h1 gradientText bold">B</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="h3 bold">Login or Sign Up</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="inputContainer">
+        <label for="input" class="light label">Email</label>
+        <input type="email" />
+      </div>
+      <div></div>
+      <div class="inputContainer">
+        <label for="input" class="light label">Password</label>
+        <input type="password" />
+      </div>
+      <div></div>
+      <a class="button primary white bold" href="home">LOGIN</a>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="light h6" style="text-align: center">Or Login with</div>
+      <div class="loginList">
+        <div
+          (click)="
+            auth.loginWithPopup({
+              authorizationParams: { connection: 'google-oauth2' }
+            })
+          "
+        ></div>
+        <div
+          (click)="
+            auth.loginWithPopup({
+              authorizationParams: { connection: 'facebook' }
+            })
+          "
+        ></div>
+        <div
+          (click)="
+            auth.loginWithPopup({
+              authorizationParams: { connection: 'windowslive' }
+            })
+          "
+        ></div>
+      </div>
+      <div></div>
+      <div class="light" style="text-align: center">
+        Don't have an account?
+        <a class="gradientText" href="./signup">Sign Up</a>
+      </div>
+    </div>
+    <div class="dividerh"></div>
+    <div class="loginRight"></div>
+  </div>
+</div> -->
+
+<div class="loginContainer">
+  <div class="loginContainerIn">
+    <div class="loginLeft">
+      <div class="h1 gradientText bold">B.</div>
+      <div class="loginList">
+        <div
+          (click)="
+            auth.loginWithRedirect({
+              authorizationParams: { connection: 'google-oauth2' }
+            })
+          "
+        >
+          <div></div>
+          <div class="h6">Login with Google</div>
+        </div>
+        <div
+          (click)="
+            auth.loginWithRedirect({
+              authorizationParams: { connection: 'facebook' }
+            })
+          "
+        >
+          <div></div>
+          <div class="h6">Login with Facebook</div>
+        </div>
+        <div
+          (click)="
+            auth.loginWithRedirect({
+              authorizationParams: { connection: 'windowslive' }
+            })
+          "
+        >
+          <div></div>
+          <div class="h6">Login with Windows</div>
+        </div>
+        <a class="button primary white bold" href="home">LOGIN</a>
+      </div>
+    </div>
+    <div class="dividerh"></div>
+    <div class="loginRight"></div>
+  </div>
+</div>

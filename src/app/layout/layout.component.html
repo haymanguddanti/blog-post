@@ -1,0 +1,12 @@
+<header>
+  <div class="h3 bold logo gradientText"><a href="/home">B</a></div>
+  <div></div>
+  <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+    <a href="/add" class="button primary">Add Post</a>
+    <button class="primary" (click)="logout()">Log out</button>
+  </ng-container>
+  <ng-template #loggedOut>
+    <a class="button" href="/login">Log in</a>
+  </ng-template>
+</header>
+<router-outlet />
