@@ -17,7 +17,11 @@
     </a>
     <div class="heroContainerRight">
       <div class="h2 bold">Editior's Picks</div>
-      <a class="featured" *ngFor="let post of ePosts" href="/view/{{ post.id }}">
+      <a
+        class="featured"
+        *ngFor="let post of ePosts"
+        href="/view/{{ post.id }}"
+      >
         <div
           class="featureImg"
           [style.backgroundImage]="'url(' + post.image + ')'"
@@ -46,6 +50,7 @@
       (keyup)="searchPosts($event.target)"
       id="search"
       [(ngModel)]="searchValue"
+      class="form-control w-25"
     />
   </div>
   <div class="articleListContainer">
