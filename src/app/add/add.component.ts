@@ -117,6 +117,11 @@ export class AddComponent {
   submitForm() {
     if (this.addForm.valid) {
       // console.log('Form data:', this.addForm.value);
+      if (this.addForm.get('isEditorPick')?.value) {
+        this.addForm.get('status')?.setValue(2);
+      } else {
+        this.addForm.get('status')?.setValue(1);
+      }
       this.postsService.addPost(this.addForm.value).subscribe(
         (res) => {
           this.router.navigate(['/home']);

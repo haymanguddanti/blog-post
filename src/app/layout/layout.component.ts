@@ -19,12 +19,12 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit() {
     if (!this.auth.isAuthenticated$ && localStorage.getItem('user'))
-      this.router.navigate(['login']);
+      this.router.navigate(['/']);
   }
 
   logout() {
     localStorage.removeItem('user');
     this.auth.logout();
-    this.router.navigate(['login']);
+    this.router.navigate(['/']);
   }
 }

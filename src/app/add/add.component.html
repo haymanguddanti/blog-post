@@ -1,9 +1,14 @@
 <form [formGroup]="addForm" class="pageContainer" (ngSubmit)="submitForm()">
   <div class="heading">
     <div class="h3 bold">Add Post</div>
-    <button type="submit" class="primary">Publish</button>
+    <button type="submit" class="btn btn-primary btn-lg">Publish</button>
   </div>
-  <input type="text" placeholder="Title" class="h1" formControlName="title" />
+  <input
+    type="text"
+    placeholder="Title"
+    class="h1 form-control"
+    formControlName="title"
+  />
   <div>
     <label style="grid-area: b">
       <svg
@@ -39,6 +44,22 @@
       />
       <img class="addImage" src="{{ url }}" />
     </label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input
+          class="form-check-input mt-0"
+          type="checkbox"
+          value=""
+          formControlName="isEditorPick"
+        />
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        readonly="true"
+        value="Editor's pick"
+      />
+    </div>
   </div>
   <ckeditor
     [editor]="Editor"

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class PostsService {
-  private baseUrl = 'http://localhost:3000/posts';
+  private baseUrl = 'https://blog-post-db-tau.vercel.app/posts';
 
   constructor(private http: HttpClient) {}
 

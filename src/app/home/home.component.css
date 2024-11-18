@@ -77,7 +77,7 @@
 
 .filters > * {
   border: 1px solid var(--primary);
-  padding: 14px 22px 8px 22px;
+  padding: 12px 24px;
   border-radius: 24px;
   cursor: pointer;
 }

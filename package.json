@@ -20,6 +20,7 @@
     "@angular/router": "^18.1.0",
     "@auth0/auth0-angular": "^2.2.3",
     "@ckeditor/ckeditor5-angular": "^8.0.0",
+    "bootstrap": "^5.3.3",
     "ckeditor5": "^43.0.0",
     "json-server": "^1.0.0-beta.1",
     "rxjs": "~7.8.0",
